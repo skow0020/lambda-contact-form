@@ -24,7 +24,7 @@
       </div>
       <div id="alert" class="alert d-none">
       </div>
-      <button type="submit" class="btn btn-primary">
+      <button id='submit' type="submit" class="btn btn-primary">
         Submit
       </button>
     </form>
@@ -52,10 +52,13 @@
         return
       }
 
+      $('#submit').prop('disabled', true);
       $.post('https://hf8r5n5mz8.execute-api.us-east-1.amazonaws.com/default/ContactFormFunction', {name, email, message}).done(_ => {
+
         showMessage("Thanks for contacting us. We'll be in touch shortly.", 'success')
       }).fail(_ => {
         showMessage('Something went wrong when submiting the message', 'danger')
+        $('#submit').prop('disabled', false);
       })
     })
   </script>
