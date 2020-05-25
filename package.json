@@ -1,0 +1,12 @@
+{
+  "name": "contact_form",
+  "version": "1.0.0",
+  "description": "Contact Form Component",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node index.js"
+  },
+  "author": "Colin Skow",
+  "license": "ISC"
+}
