@@ -19,7 +19,7 @@ var app = express()
 
 app.use(express.static('www'));
 
-var server = app.listen(5000, function () {
+var server = app.listen(process.env.PORT || 5000, function () {
 
     var host = server.address().address
     var port = server.address().port
