@@ -14,7 +14,7 @@
     let emailText = email.val();
     let messageText = message.val();
 
-    $.post('https://hf8r5n5mz8.execute-api.us-east-1.amazonaws.com/ContactFormStage', { nameText, emailText, messageText }).done(_ => {
+    $.post('https://hf8r5n5mz8.execute-api.us-east-1.amazonaws.com/default/ContactFormFunction', { nameText, emailText, messageText }).done(_ => {
       showMessage("Thanks for contacting us. We'll be in touch shortly.", 'success');
     }).fail(_ => {
       showMessage('Something went wrong when submiting the message', 'danger');
