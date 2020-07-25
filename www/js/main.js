@@ -2,19 +2,19 @@
 (function ($) {
   "use strict";
 
-  let name = $('.validate-input input[name="name"]');
-  let email = $('.validate-input input[name="email"]');
-  let message = $('.validate-input textarea[name="message"]');
+  let nameField = $('.validate-input input[name="name"]');
+  let emailField = $('.validate-input input[name="email"]');
+  let messageField = $('.validate-input textarea[name="message"]');
 
   $('.validate-form').submit(event => {
     event.preventDefault();
 
     if (!runValidation()) return;
-    let nameText = name.val();
-    let emailText = email.val();
-    let messageText = message.val();
+    let name = nameField.val().trim();
+    let email = emailField.val().trim();
+    let message = messageField.val().trim();
 
-    $.post('https://hf8r5n5mz8.execute-api.us-east-1.amazonaws.com/default/ContactFormFunction', { nameText, emailText, messageText }).done(_ => {
+    $.post('https://hf8r5n5mz8.execute-api.us-east-1.amazonaws.com/default/ContactFormFunction', { name, email, message }).done(_ => {
       showMessage("Thanks for contacting us. We'll be in touch shortly.", 'success');
     }).fail(_ => {
       showMessage('Something went wrong when submiting the message', 'danger');
