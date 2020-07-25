@@ -32,18 +32,18 @@
   function runValidation() {
     let check = true;
 
-    if ($(name).val().trim() === '') {
-      showValidate(name);
+    if ($(nameField).val().trim() === '') {
+      showValidate(nameField);
       check = false;
     }
 
-    if ($(email).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) === null) {
-      showValidate(email);
+    if ($(emailField).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) === null) {
+      showValidate(emailField);
       check = false;
     }
 
-    if ($(message).val().trim() === '') {
-      showValidate(message);
+    if ($(messageField).val().trim() === '') {
+      showValidate(messageField);
       check = false;
     }
 
