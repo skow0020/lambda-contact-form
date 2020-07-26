@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "puppeteer": "jest -t=UI",
     "start": "node index.js"
   },
   "author": "Colin Skow",
@@ -17,6 +18,11 @@
   },
   "devDependencies": {
     "jest": "^26.1.0",
+    "jest-puppeteer": "^4.4.0",
+    "puppeteer": "^5.2.1",
     "supertest": "^4.0.2"
+  },
+  "jest": {
+    "preset": "jest-puppeteer"
   }
 }
