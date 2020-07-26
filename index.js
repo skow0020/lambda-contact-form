@@ -3,10 +3,10 @@ var app = express()
 
 app.use(express.static('www'));
 
-var server = app.listen(process.env.PORT || 5000, function () {
+let PORT = process.env.PORT || 5000;
 
-    var host = server.address().address;
-    var port = server.address().port;
-
-    console.log('Express app listening at http://%s:%s', host, port);
+var server = app.listen(PORT, function () {
+    console.log(`Express app listening on PORT ${PORT}`);
 });
+
+module.exports = server;
