@@ -297,6 +297,10 @@ textarea.input3 {
   transition: all 0.4s;
 }
 
+.contact3-form-btn:disabled {
+  opacity: 0.5;
+}
+
 .contact3-form-btn:hover {
   color: #fff;
 }
